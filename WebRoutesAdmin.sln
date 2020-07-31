@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRoutesAdmin.AspNet", "WebRoutesAdmin.AspNet\WebRoutesAdmin.AspNet.csproj", "{A607CC6E-698D-48A5-996E-F123BBE9F5DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRoutesAdmin.Win", "WebRoutesAdmin.Win\WebRoutesAdmin.Win.csproj", "{205D8655-B471-4673-B438-D92026372326}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A607CC6E-698D-48A5-996E-F123BBE9F5DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A607CC6E-698D-48A5-996E-F123BBE9F5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A607CC6E-698D-48A5-996E-F123BBE9F5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A607CC6E-698D-48A5-996E-F123BBE9F5DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{205D8655-B471-4673-B438-D92026372326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{205D8655-B471-4673-B438-D92026372326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{205D8655-B471-4673-B438-D92026372326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{205D8655-B471-4673-B438-D92026372326}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D22D436C-1C44-489E-8D18-2A95F416D150}
+	EndGlobalSection
+EndGlobal
