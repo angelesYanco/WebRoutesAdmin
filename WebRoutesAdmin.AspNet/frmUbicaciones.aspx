@@ -11,7 +11,7 @@
     <!-- 1. Fin-->
 
     <!-- 2. Location picker -->
-    <script type="text/javascript" src='https://maps.google.com/maps/api/js?sensor=false&libraries=places&key={key}'></script>
+    <script type="text/javascript" src='https://maps.google.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyCqIRPT0HbmTrILO5kq7fePDXgb-z9ksfA'></script>
     <script src="js/locationpicker.jquery.js"></script>
 
     <!-- 2. Fin -->
@@ -35,6 +35,8 @@
 
                     <!-- Latitud y longitud -->
                     <div class="form-group">
+                        <label for="exampleInputPassword1">Direccion:</label>
+                        <asp:TextBox ID="txtDireccion" Text="Porrua" CssClass="form-control" runat="server"></asp:TextBox>
                         <label for="exampleInputPassword1">Lat.:</label>
                         <asp:TextBox ID="txtLat" Text="19.3508698" CssClass="form-control" runat="server"></asp:TextBox>
                         <label for="exampleInputPassword1">Long.:</label>
@@ -65,14 +67,18 @@
             location: {
                 latitude: $('#<%=txtLat.ClientID%>').val(),
                 longitude: $('#<%=txtLong.ClientID%>').val()
+                
             },
             inputBinding: {
                 latitudeInput: $('#<%=txtLat.ClientID%>'),
                 longitudeInput: $('#<%=txtLong.ClientID%>'),
                 locationNameInput: $('#<%=txtUbicacion.ClientID%>')
             },
-            enableAutocomplete: true
+
+            enableAutocomplete: true,
+            enableReverseGeocode: true
         });
+
     </script>
 
 </body>

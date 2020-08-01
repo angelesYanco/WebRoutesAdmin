@@ -26,6 +26,7 @@ namespace WebRoutesAdmin.Win
         public frmRutas()
         {
             InitializeComponent();
+            
         }
 
         private void frmRutas_Load(object sender, EventArgs e)
@@ -65,6 +66,7 @@ namespace WebRoutesAdmin.Win
             //Ocultamos las columnas de latitud y longitud
             dataGridView1.Columns[1].Visible = false;
             dataGridView1.Columns[2].Visible = false;
+
         }
 
         private void SeleccionarRegistro(object sender, DataGridViewCellMouseEventArgs e)
@@ -78,6 +80,21 @@ namespace WebRoutesAdmin.Win
             //Se asignan los valores del grid al marcador.
             marker.Position = new PointLatLng(Convert.ToDouble(txtLatitud.Text), Convert.ToDouble(txtLongitud.Text));
             gMapControl1.Position = marker.Position;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string ubicacion = "Argentina 15, 06020, centro, mexico";
+            try { 
+                gMapControl1.SetPositionByKeywords(ubicacion); 
+            }
+            catch (Exception ex)
+            { 
+                MessageBox.Show(ex.Message); 
+            }
+            finally { }
+
+            MessageBox.Show(ubicacion);
         }
     }
 }
