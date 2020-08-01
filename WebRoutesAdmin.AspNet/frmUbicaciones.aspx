@@ -11,7 +11,7 @@
     <!-- 1. Fin-->
 
     <!-- 2. Location picker -->
-    <script type="text/javascript" src='https://maps.google.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyCqIRPT0HbmTrILO5kq7fePDXgb-z9ksfA'></script>
+    <script type="text/javascript" src='https://maps.google.com/maps/api/js?sensor=false&libraries=places&key='></script>
     <script src="js/locationpicker.jquery.js"></script>
 
     <!-- 2. Fin -->
