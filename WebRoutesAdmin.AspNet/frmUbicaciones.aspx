@@ -11,14 +11,16 @@
     <!-- 1. Fin-->
 
     <!-- 2. Location picker -->
-    <script type="text/javascript" src='https://maps.google.com/maps/api/js?sensor=false&libraries=places&key='></script>
+    <script src='https://maps.google.com/maps/api/js?key=&libraries=places'></script>
     <script src="js/locationpicker.jquery.js"></script>
+    <%--<script src="js/main.js"></script>--%>
 
-    <!-- 2. Fin -->
-    <title>Creacion de Ruta</title>
+    <!-- 2. Fin --> 
+    <title>Creación de Ruta</title>
 </head>
 <body>
     <form id="form1" runat="server">
+        <!--Creamos nuestro contenedor-->
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -26,17 +28,15 @@
                     <div class="form-group">
                         <label for="exampleInputEmail1">Ubicación</label>
                         <asp:HiddenField ID="txtID" runat="server" />
-                        <asp:TextBox ID="txtUbicacion" Text="Porrua" CssClass="form-control" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtUbicacion" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
 
                     <div class="form-group">
-                        <div id="ModalMapPreview" style="width: 100%; height: 300px"></div>
+                        <div id="mapPreview" style="width: 100%; height: 300px"></div>
                     </div>
 
                     <!-- Latitud y longitud -->
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Direccion:</label>
-                        <asp:TextBox ID="txtDireccion" Text="Porrua" CssClass="form-control" runat="server"></asp:TextBox>
                         <label for="exampleInputPassword1">Lat.:</label>
                         <asp:TextBox ID="txtLat" Text="19.3508698" CssClass="form-control" runat="server"></asp:TextBox>
                         <label for="exampleInputPassword1">Long.:</label>
@@ -49,6 +49,7 @@
                         <asp:Button ID="btnModificar" CssClass="btn btn-warning" runat="server" Text="Modificar" UseSubmitBehavior="false" Enabled="false"/>
                         <asp:Button ID="btnEliminar" CssClass="btn btn-danger" runat="server" Text="Eliminar" UseSubmitBehavior="false" Enabled="false"/>
                         <asp:Button ID="btnLimpiar" CssClass="btn btn-default" runat="server" Text="Limpiar" UseSubmitBehavior="false" />
+                        <asp:Button ID="btnPosicion" CssClass="btn btn-default" runat="server" Text="Posicion" UseSubmitBehavior="false" OnClick="btnPosicion_Click" />
                     </div>
 
                 </div>
@@ -60,25 +61,25 @@
             </div>
         </div>
     </form>
-    
+
     <script>
-        $('#ModalMapPreview').locationpicker({
+        $('#mapPreview').locationpicker({
             radius: 0,
             location: {
                 latitude: $('#<%=txtLat.ClientID%>').val(),
-                longitude: $('#<%=txtLong.ClientID%>').val()
-                
+        longitude: $('#<%=txtLong.ClientID%>').val()
+
             },
             inputBinding: {
                 latitudeInput: $('#<%=txtLat.ClientID%>'),
-                longitudeInput: $('#<%=txtLong.ClientID%>'),
+        longitudeInput: $('#<%=txtLong.ClientID%>'),
                 locationNameInput: $('#<%=txtUbicacion.ClientID%>')
             },
-
             enableAutocomplete: true,
-            enableReverseGeocode: true
+            onchanged: function (currentlocation, radious, isMrketDropped) {
+                
+            }
         });
-
     </script>
 
 </body>

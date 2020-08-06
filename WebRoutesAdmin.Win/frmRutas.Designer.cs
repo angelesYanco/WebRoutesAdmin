@@ -39,7 +39,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnRuta = new System.Windows.Forms.Button();
+            this.btnComoLLegar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -72,12 +74,15 @@
             this.gMapControl1.Size = new System.Drawing.Size(512, 437);
             this.gMapControl1.TabIndex = 0;
             this.gMapControl1.Zoom = 0D;
+            this.gMapControl1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gMapControl1_MouseDoubleClick);
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.btnBuscar);
+            this.groupBox1.Controls.Add(this.btnComoLLegar);
+            this.groupBox1.Controls.Add(this.btnRuta);
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.btnEliminar);
             this.groupBox1.Controls.Add(this.btnAgregar);
@@ -98,42 +103,44 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 175);
+            this.dataGridView1.Location = new System.Drawing.Point(10, 171);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(253, 263);
+            this.dataGridView1.Size = new System.Drawing.Size(253, 267);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SeleccionarRegistro);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(91, 146);
+            this.btnEliminar.Location = new System.Drawing.Point(200, 51);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(63, 23);
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(10, 146);
+            this.btnAgregar.Location = new System.Drawing.Point(200, 20);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(63, 23);
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtLongitud
             // 
-            this.txtLongitud.Location = new System.Drawing.Point(10, 120);
+            this.txtLongitud.Location = new System.Drawing.Point(10, 144);
             this.txtLongitud.Name = "txtLongitud";
-            this.txtLongitud.Size = new System.Drawing.Size(253, 20);
+            this.txtLongitud.Size = new System.Drawing.Size(184, 20);
             this.txtLongitud.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 103);
+            this.label3.Location = new System.Drawing.Point(10, 122);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 13);
             this.label3.TabIndex = 4;
@@ -141,15 +148,15 @@
             // 
             // txtLatitud
             // 
-            this.txtLatitud.Location = new System.Drawing.Point(10, 80);
+            this.txtLatitud.Location = new System.Drawing.Point(10, 93);
             this.txtLatitud.Name = "txtLatitud";
-            this.txtLatitud.Size = new System.Drawing.Size(253, 20);
+            this.txtLatitud.Size = new System.Drawing.Size(184, 20);
             this.txtLatitud.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 63);
+            this.label2.Location = new System.Drawing.Point(10, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 2;
@@ -157,29 +164,49 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(10, 37);
+            this.txtDescripcion.Location = new System.Drawing.Point(10, 42);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(253, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(184, 20);
             this.txtDescripcion.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 20);
+            this.label1.Location = new System.Drawing.Point(10, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Descripción";
             // 
-            // btnBuscar
+            // button1
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(172, 146);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 9;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.button1.Location = new System.Drawing.Point(200, 82);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(63, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Poligon";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnRuta
+            // 
+            this.btnRuta.Location = new System.Drawing.Point(200, 113);
+            this.btnRuta.Name = "btnRuta";
+            this.btnRuta.Size = new System.Drawing.Size(63, 23);
+            this.btnRuta.TabIndex = 10;
+            this.btnRuta.Text = "Ruta";
+            this.btnRuta.UseVisualStyleBackColor = true;
+            this.btnRuta.Click += new System.EventHandler(this.btnRuta_Click);
+            // 
+            // btnComoLLegar
+            // 
+            this.btnComoLLegar.Location = new System.Drawing.Point(200, 144);
+            this.btnComoLLegar.Name = "btnComoLLegar";
+            this.btnComoLLegar.Size = new System.Drawing.Size(63, 23);
+            this.btnComoLLegar.TabIndex = 11;
+            this.btnComoLLegar.Text = "Llegar";
+            this.btnComoLLegar.UseVisualStyleBackColor = true;
+            this.btnComoLLegar.Click += new System.EventHandler(this.btnComoLLegar_Click);
             // 
             // frmRutas
             // 
@@ -190,6 +217,7 @@
             this.Controls.Add(this.gMapControl1);
             this.Name = "frmRutas";
             this.Text = "Ruta de entrega";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmRutas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -211,7 +239,9 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRuta;
+        private System.Windows.Forms.Button btnComoLLegar;
     }
 }
 
