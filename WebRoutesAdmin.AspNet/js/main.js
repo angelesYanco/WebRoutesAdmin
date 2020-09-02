@@ -1,2 +1,3 @@
 ﻿'use strict'
 
+var llave = "";

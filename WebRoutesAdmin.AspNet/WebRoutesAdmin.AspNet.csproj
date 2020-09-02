@@ -82,6 +82,16 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebRoutesAdmin.BLL\WebRoutesAdmin.BLL.csproj">
+      <Project>{e02775e9-42d2-4d7c-ac5a-714deed75b47}</Project>
+      <Name>WebRoutesAdmin.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebRoutesAdmin.DAL\WebRoutesAdmin.DAL.csproj">
+      <Project>{9463aed6-f3da-4b17-9c41-f914a75e78ea}</Project>
+      <Name>WebRoutesAdmin.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

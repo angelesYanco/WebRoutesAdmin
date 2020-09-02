@@ -24,6 +24,15 @@ namespace WebRoutesAdmin.AspNet
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// txtPedido control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPedido;
+
+        /// <summary>
         /// txtID control.
         /// </summary>
         /// <remarks>
@@ -94,5 +103,14 @@ namespace WebRoutesAdmin.AspNet
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnLimpiar;
+
+        /// <summary>
+        /// gvwUbicaciones control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvwUbicaciones;
     }
 }

@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRoutesAdmin.AspNet", "We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRoutesAdmin.Win", "WebRoutesAdmin.Win\WebRoutesAdmin.Win.csproj", "{205D8655-B471-4673-B438-D92026372326}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRoutesAdmin.DAL", "WebRoutesAdmin.DAL\WebRoutesAdmin.DAL.csproj", "{9DAB2FAB-BFE5-497C-A11B-400A9CE67755}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRoutesAdmin.BLL", "WebRoutesAdmin.BLL\WebRoutesAdmin.BLL.csproj", "{E02775E9-42D2-4D7C-AC5A-714DEED75B47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRoutesAdmin.BLL", "WebRoutesAdmin.BLL\WebRoutesAdmin.BLL.csproj", "{1875E6CB-C02E-40BE-ADAE-960F6C64396E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRoutesAdmin.DAL", "WebRoutesAdmin.DAL\WebRoutesAdmin.DAL.csproj", "{9463AED6-F3DA-4B17-9C41-F914A75E78EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{205D8655-B471-4673-B438-D92026372326}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{205D8655-B471-4673-B438-D92026372326}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{205D8655-B471-4673-B438-D92026372326}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9DAB2FAB-BFE5-497C-A11B-400A9CE67755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9DAB2FAB-BFE5-497C-A11B-400A9CE67755}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9DAB2FAB-BFE5-497C-A11B-400A9CE67755}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9DAB2FAB-BFE5-497C-A11B-400A9CE67755}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1875E6CB-C02E-40BE-ADAE-960F6C64396E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1875E6CB-C02E-40BE-ADAE-960F6C64396E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1875E6CB-C02E-40BE-ADAE-960F6C64396E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1875E6CB-C02E-40BE-ADAE-960F6C64396E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E02775E9-42D2-4D7C-AC5A-714DEED75B47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E02775E9-42D2-4D7C-AC5A-714DEED75B47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E02775E9-42D2-4D7C-AC5A-714DEED75B47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E02775E9-42D2-4D7C-AC5A-714DEED75B47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9463AED6-F3DA-4B17-9C41-F914A75E78EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9463AED6-F3DA-4B17-9C41-F914A75E78EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9463AED6-F3DA-4B17-9C41-F914A75E78EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9463AED6-F3DA-4B17-9C41-F914A75E78EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
